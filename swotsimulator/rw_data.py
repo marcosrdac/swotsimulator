@@ -1155,7 +1155,7 @@ class NETCDF_MODEL():
         Argument is index=index to load part of the variable.'''
         for key, value in self.input_var_list.items():
             nfile0 = self.nfile
-            _nfile = '{}{}.nc'.format(nfile0, value[1])
+            _nfile = '{}{}'.format(nfile0, value[1])
             if os.path.exists(_nfile):
                 self.input_var[key] = read_var(_nfile, value[0], index=index,
                                                time=self.time,
